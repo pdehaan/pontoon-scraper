@@ -27,10 +27,16 @@ getTranslations('test-pilot-firefox-send', 90)
 $(npm bin)/pontoon-scraper --product=test-pilot-firefox-send
 ```
 
-Or, if you want to filter by locales with >=92% translations, you can specify the `--min-pct` argument:
+Or, if you want to filter by locales with >=90% translations, you can specify the `--min-pct` argument:
 
 ```sh
-$(npm bin)/pontoon-scraper --product=test-pilot-firefox-send --min-pct=92
+$(npm bin)/pontoon-scraper --product=test-pilot-firefox-send --min-pct=90
+```
+
+If you're using npm@5.x, you can use `npx` to run the `pontoon-scraper` script without needing to install the dependency globally/locally before using it. This example also pipes the `pontoon-scraper` output through [`jq`](https://stedolan.github.io/jq/) to only return the `locales` property:
+
+```sh
+$ npx pdehaan/pontoon-scraper --product=test-pilot-firefox-send --min-pct=95 | jq '.locales'
 ```
 
 ## License:
