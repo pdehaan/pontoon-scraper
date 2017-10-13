@@ -1,0 +1,24 @@
+{
+  "name": "pontoon-scraper",
+  "version": "1.0.0",
+  "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
+  "bin": "bin/get-translations.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "node-fetch": "^1.7.3",
+    "yargs": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0"
+  },
+  "keywords": [
+    "pontoon"
+  ],
+  "license": "WTFPL",
+  "main": "lib.js",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node test"
+  }
+}
